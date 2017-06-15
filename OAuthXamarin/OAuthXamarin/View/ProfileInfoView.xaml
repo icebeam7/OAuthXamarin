@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OAuthXamarin.View.ProfileInfoView">
+    <StackLayout Padding="10" x:Name="FB_Content">
+        <StackLayout Orientation="Horizontal" Padding="5">
+            <Image Source="{Binding User.ProfilePictureURL}"
+                   HeightRequest="100" WidthRequest="100" VerticalOptions="Start"/>
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre: " TextColor="Black" Font="Bold" FontSize="16"/>
+                    <Label Text="{Binding User.Name}" TextColor="Black" Font="Bold" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ID: " TextColor="Black" Font="Bold" FontSize="16"/>
+                    <Label Text="{Binding User.ID}" TextColor="Black" Font="Bold" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Nombre Social: " TextColor="Black" Font="Bold" FontSize="16"/>
+                    <Label Text="{Binding User.SocialName}" TextColor="Black" Font="Bold" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Email: " TextColor="Black" Font="Bold" FontSize="16"/>
+                    <Label Text="{Binding User.Email}" TextColor="Black" Font="Bold" FontSize="16"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
